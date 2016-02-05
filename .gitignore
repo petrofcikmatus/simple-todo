@@ -1,0 +1,13 @@
+# IDE
+.idea
+
+# Application config
+_app/config/config.php
+
+# Composer
+vendor
+composer.lock
+composer.phar
+
+# Other
+bower_components

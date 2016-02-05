@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 20px;
+}
+
+.controls a {
+    font-size: 13px;
+    margin-left: 8px;
+    text-decoration: none;
+}
+
+.item-in-the-list:nth-of-type(even) {
+    background: #2c2c2c;
+}
+
+.edit-link {
+    position: relative;
+    top: -1px;
+}
+
+textarea {
+    resize: none;
+}
