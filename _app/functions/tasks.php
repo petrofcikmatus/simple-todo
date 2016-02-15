@@ -32,7 +32,7 @@ function edit_task($user_id, $task_id) {
         array("user_id" => $user_id, "task_id" => $task_id, "task_text" => $task_text)
     );
 
-    add_message("Task has been edited.");
+    //add_message("Task has been edited.");
     return true;
 }
 
@@ -47,7 +47,7 @@ function delete_task($user_id, $task_id) {
         return false;
     }
 
-    add_message("Task has been edited.");
+    //add_message("Task has been deleted.");
     return true;
 }
 

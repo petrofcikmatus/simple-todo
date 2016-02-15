@@ -120,13 +120,13 @@ function do_login() {
 
     $_SESSION["user"] = $user;
     setcookie ("email", $email, time() + (3600 * 24 * 7)); // 7 days
-    add_message("Welcome " . get_user_name() . "!");
+    //add_message("Welcome " . get_user_name() . "!");
     return true;
 }
 
 // odhlási užívateľa
 function do_logout() {
     unset($_SESSION["user"]);
-    add_message("Good bye!");
+    //add_message("Good bye!");
     return true;
 }
