@@ -33,25 +33,31 @@
 <body class="<?= (isset($class) ? $class : "default") ?>">
 
 <!--START .container-->
-<div class="container">
+<div class="container margin-top-20">
 
-    <header>
-        <?php if (has_messages()): foreach (get_messages() as $message): ?>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-info alert-dismissible fade in" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>Message:</strong> <?= $message ?>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; endif ?>
-
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1><?= (isset($title) ? $title : "Welcome") ?></h1>
+    <?php if (isset($show_logout) && true == $show_logout) : ?>
+        <div class="row margin-bottom-20">
+            <div class="col-md-12 text-right">
+                <a href="<?= url() ?>/logout" class="btn btn-primary btn-sm" id="js-link-logout">logout</a>
             </div>
         </div>
-    </header>
+    <?php endif ?>
+
+    <?php if (has_messages()): foreach (get_messages() as $message): ?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-info alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Message:</strong> <?= $message ?>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; endif ?>
+
+    <!--<div class="row">
+        <div class="col-md-12 text-center">
+            <h1><?= (isset($title) ? $title : "Welcome") ?></h1>
+        </div>
+    </div>-->

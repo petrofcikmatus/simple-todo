@@ -48,6 +48,11 @@
         $('#js-form-delete').on('submit', function (event) {
             return confirm('for sure?');
         });
+
+        // delete form
+        $('#js-link-logout').on('click', function (event) {
+            return confirm('for sure?');
+        });
     });
 
 }(jQuery, window, document));

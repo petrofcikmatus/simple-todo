@@ -12,7 +12,7 @@ if (is_post()) {
 
 $tasks = get_tasks(get_user_id());
 
-include_header(array("title" => "your todo list")) ?>
+include_header(array("title" => "your todo list", "show_logout" => true)) ?>
     <div class="row">
 
         <div class="col-md-12">

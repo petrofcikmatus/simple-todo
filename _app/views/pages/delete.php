@@ -16,7 +16,7 @@ if (!$task) {
     show_404();
 }
 
-include_header(array("title" => "delete"));
+include_header(array("title" => "delete", "show_logout" => true));
 
 ?>
     <div class="row">
