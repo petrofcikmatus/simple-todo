@@ -119,6 +119,7 @@ function do_login() {
     }
 
     $_SESSION["user"] = $user;
+    setcookie ("email", $email, time() + (3600 * 24 * 7)); // 7 days
     add_message("Welcome " . get_user_name() . "!");
     return true;
 }

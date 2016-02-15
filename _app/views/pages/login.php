@@ -10,6 +10,10 @@ if (is_post()) {
     }
 }
 
+if (isset($_COOKIE["email"])) {
+    $_POST["email"] = $_COOKIE["email"];
+}
+
 include_header(array("title" => "login"));
 
 ?>
