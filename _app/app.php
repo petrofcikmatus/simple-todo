@@ -19,6 +19,10 @@ if (isset($config["errors"]) && true == $config["errors"]) {
     error_reporting(0);
 }
 
+if (isset($config["encryptSecret"])) {
+    define("ENCRYPT_SECRET", $config["encryptSecret"]);
+}
+
 // nejaké konštanty ktoré využijeme v aplikácii, napr. vo funkcii url()
 if (isset($config["base_url"])) {
     define("BASE_URL", $config["base_url"]);
